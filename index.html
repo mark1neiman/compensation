@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+<!-- Mark was here -->
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Task compensation</title>
+    <link rel="stylesheet" href="./css/style.css">
+</head>
+
+<body>
+    <h1>Compensation Calculator</h1>
+    <p>Enter your monthly gross income and total sick leave days to calculate your sick day compensation:</p>
+    <form>
+        <label for="income">Average income</label><br>
+        <input type="number" id="income" name="income"><br>
+        <label for="days">Days on sick-leave</label><br>
+        <input type="number" id="days" name="days"><br>
+        <label for="tb">I have tubercolosis</label><br>
+        <input type="checkbox" id="tb" name="tb"><br><br>
+    </form>
+    <h2>Results:</h2>
+    <p>The employer compensates: <span id="employer-days"></span>,,,,,<span id="employer-compensation"></span></p>
+    <p>Health Insurance compensation: <span id="insurance-days"></span>,,,,,<span id="insurance-compensation"></span>
+    </p>
+    <p>Total compensation: <span id="total-compensation"></span></p>
+
+    <script src="main.js"></script>
+</body>
+
+</html>
