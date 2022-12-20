@@ -4,7 +4,7 @@
 ## This is my solution for the assignment test made by WE.ee.
 
 - Quick description: Create an frontend app which calculates sick-leave health insurance compensation 
-- Languages: HTML, SASS, JS vanila 
+- Languages: HTML, SCSS, JS vanila 
 
 #### Requirements: 
 - I can enter my monthly gross income 
@@ -21,4 +21,5 @@
 #### 20.12.22 
 First commit - added all nesesary elements, js code is done, seems like everything works perfectly. Now i have to make scss styles for the form, maybe i will end this task today. 
 
+Second commit - added scss, all thing except text part, are ready. Tommorow will end this.
 
