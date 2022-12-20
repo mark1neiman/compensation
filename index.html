@@ -7,25 +7,63 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Task compensation</title>
-    <link rel="stylesheet" href="./css/style.css">
+    <link rel="stylesheet" href="./styles/style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,300;0,400;0,700;1,300&family=Roboto:wght@100;300&display=swap"
+        rel="stylesheet">
 </head>
 
 <body>
-    <h1>Compensation Calculator</h1>
-    <p>Enter your monthly gross income and total sick leave days to calculate your sick day compensation:</p>
-    <form>
-        <label for="income">Average income</label><br>
-        <input type="number" id="income" name="income"><br>
-        <label for="days">Days on sick-leave</label><br>
-        <input type="number" id="days" name="days"><br>
-        <label for="tb">I have tubercolosis</label><br>
-        <input type="checkbox" id="tb" name="tb"><br><br>
-    </form>
-    <h2>Results:</h2>
-    <p>The employer compensates: <span id="employer-days"></span>,,,,,<span id="employer-compensation"></span></p>
-    <p>Health Insurance compensation: <span id="insurance-days"></span>,,,,,<span id="insurance-compensation"></span>
-    </p>
-    <p>Total compensation: <span id="total-compensation"></span></p>
+    <div class="compensation-card">
+        <h1>Compensation <br />Calculator</h1>
+        <form>
+            <div class="table">
+                <label for="income">Average income</label><br>
+                <input type="number" id="income" name="income" placeholder="€" value=""><br>
+            </div>
+            <div class="table">
+                <label for="days">Days on sick-leave</label><br>
+                <input type="number" id="days" name="days" placeholder="days" value=""><br>
+            </div>
+            <div class="table">
+                <input type="checkbox" id="tb" name="tb" class="custom-checkbox">
+                <label for="tb">I have tubercolosis</label>
+            </div>
+            <button id="calculate-button">Calculate</button>
+        </form>
+        <hr />
+        <div class="lower-part">
+            <div class="employer-part">
+                <p>The employer compensates</p>
+                <div class="days"><span id="employer-days" class="day-count"></span></div>
+                <span id="employer-compensation" class="money-count"></span>
+                <div class="daily-allowence">
+                    <p>Daily allowance</p>
+                    <span id="daily-allowenceEmp"></span>
+                </div>
+            </div>
+            <div class="insurance-part">
+                <p>Health Insurance compensation </p>
+                <div class="days">
+                    <span id="insurance-days" class="day-count"></span>
+                </div>
+                <span id="insurance-compensation" class="money-count"></span>
+                <div class="daily-allowence">
+                    <p>Daily allowance</p>
+                    <span id="daily-allowenceIns"></span>
+                </div>
+            </div>
+        </div>
+        <hr />
+        <div class="total-compensation">
+            <p>Compensation total for <span id="total-days"></span> days (gross)</p>
+            <div class='total'>
+                <span id="total-compensation"></span>
+            </div>
+        </div>
+    </div>
 
     <script src="main.js"></script>
 </body>
