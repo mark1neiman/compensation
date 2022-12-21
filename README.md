@@ -23,3 +23,8 @@ First commit - added all nesesary elements, js code is done, seems like everythi
 
 Second commit - added scss, all thing except text part, are ready. Tommorow will end this.
 
+Third commit - i finised the app, should work perfectly, at least i do not see problems. I hope you, as a viewer, will like it.
+               sorted out scss styles, added a bit mixins breakpoints, finilized the finail view of the app.
+               
+Time taken: i got the task yersterday 20.12.2022 at 10:20, today is 21.12.2022 and final commit made at 14:00. It took a day minus sleeping, tea, eating, walking so ~10h of working and brainstorming.
+
