@@ -12,6 +12,19 @@ const dailyAllowenceInsuranceSpan = document.getElementById('daily-allowenceIns'
 const totalDaysSpan = document.getElementById('total-days');
 
 function calculateCompensation() {
+    //Viimsael hetkel tuli meelde, et siia võiks tega juurde nö "error handling for invalid input values"
+    if (incomeInput.value <= 0 || daysInput.value < 0) {
+        employerCompensationSpan.innerText = "0 €";
+        insuranceCompensationSpan.innerText = "0 €";
+        totalCompensationSpan.innerText = "0 €";
+        totalEmployerDays.innerText = "0 days";
+        totalInsuranceDays.innerText = "0 days";
+        dailyAllowenceEmployerSpan.innerText = "0 €";
+        dailyAllowenceInsuranceSpan.innerText = "0 €";
+        totalDaysSpan.innerText = "0";
+        return;
+    }
+
     const income = incomeInput.value;
     const days = daysInput.value;
     const hasTb = tbCheckbox.checked;
