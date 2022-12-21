@@ -1,0 +1,138 @@
+.condimentum-card {
+    float: left;
+    color: white;
+
+    @include sm {
+        width: 90%;
+        margin: 20px;
+    }
+
+    @include md {
+        width: 90%;
+        margin: 20px;
+    }
+
+    @include xl {
+        width: 650px;
+        margin: 100px 0 0 100px;
+    }
+
+    p {
+        font-weight: 400;
+        font-size: 18px;
+        line-height: 30px;
+
+        @include sm {
+            width: auto;
+        }
+
+        @include md {
+            width: 90%;
+            margin: 20px;
+        }
+
+        span {
+            color: #E1261C
+        }
+    }
+
+    h1 {
+        font-weight: 700;
+        font-size: 40px;
+        line-height: 50px;
+        margin: 0 0 20px 0;
+
+    }
+
+    h2 {
+        font-weight: 700;
+        font-size: 32px;
+        line-height: 35px;
+
+        @include sm {
+            width: auto;
+        }
+
+        @include xl {
+            margin: 40px 0 20px 0;
+            width: 380px;
+        }
+
+        @include md {
+            width: auto;
+        }
+    }
+
+    img {
+        margin: 40px 0 0 0;
+
+        @include sm {
+            width: 90%;
+            margin: 20px;
+        }
+
+        @include md {
+            width: 90%;
+            margin: 20px;
+        }
+
+
+        @include xl {
+            float: right;
+            margin: 40px 10px 0 0;
+
+        }
+    }
+
+    .condimentum-card-lower {
+        width: 380px;
+
+        @include sm {
+            width: auto;
+        }
+    }
+
+    .condimentum-card-lower_list {
+        margin: 10px 0 0 30px;
+
+        @include sm {
+            width: auto;
+        }
+
+        li {
+            list-style-type: none;
+            position: relative;
+            margin: 20px 0 0 0;
+
+        }
+
+        li::before {
+            content: '';
+            width: 16px;
+            height: 4px;
+            background: linear-gradient(90deg, #911812, #E1261C);
+            position: absolute;
+            left: -24px;
+            top: 8px;
+        }
+
+        .condimentum-card-lower_list-item {
+            li {
+                list-style-type: none;
+                position: relative;
+                margin: 20px 0 0 30px;
+            }
+
+            li::before {
+                content: '';
+                width: 12px;
+                height: 4px;
+                background: linear-gradient(90deg, #D3DAE8 0%, #A7B7D8 100%);
+                position: absolute;
+                left: -24px;
+                top: 8px;
+            }
+        }
+
+    }
+}

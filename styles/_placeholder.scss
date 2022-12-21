@@ -1,0 +1,24 @@
+.placeholder-number,
+.placeholder-days {
+    position: relative;
+}
+
+.placeholder-number::after,
+.placeholder-days::after {
+    content: attr(data-placeholder);
+    position: absolute;
+    top: 33%;
+    left: 100%;
+    font-weight: 700;
+    font-size: 18px;
+}
+
+.placeholder-days::after {
+    left: 90%;
+}
+
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+    -webkit-appearance: none;
+    margin: 0;
+}
