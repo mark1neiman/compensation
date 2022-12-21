@@ -11,7 +11,6 @@ const dailyAllowenceEmployerSpan = document.getElementById('daily-allowenceEmp')
 const dailyAllowenceInsuranceSpan = document.getElementById('daily-allowenceIns');
 const totalDaysSpan = document.getElementById('total-days');
 
-
 function calculateCompensation() {
     const income = incomeInput.value;
     const days = daysInput.value;
@@ -23,8 +22,6 @@ function calculateCompensation() {
         employerCompensation = EmployerDays * (income / 0.43572985 / 100);
         // number 0.43572985 sain kalkulaator.ee Haigushüvitise kalkulaator (tööandja)
     }
-
-
 
     let insuranceCompensation = 0;
     let insuranceDays = days - 7;
@@ -54,7 +51,6 @@ function calculateCompensation() {
 
     dailyAllowenceEmployerSpan.innerText = dailyAllowenceEmployer.toFixed(2) + ' €';
 
-
     if (dailyAllowenceInsurance >= 0) {
         dailyAllowenceInsuranceSpan.innerText = dailyAllowenceInsurance.toFixed(2) + ' €';
     } else {
@@ -66,6 +62,7 @@ function calculateCompensation() {
     } else {
         totalEmployerDays.innerText = "0" + ' days';
     }
+
     if (insuranceDays > 0) {
         totalInsuranceDays.innerText = insuranceDays.toFixed() + ' days';
     } else {
@@ -77,6 +74,7 @@ calculateButton.addEventListener('click', function (event) {
     event.preventDefault();
     calculateCompensation();
 });
+
 window.onload = function () {
     calculateCompensation();
 }

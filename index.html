@@ -8,63 +8,95 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Task compensation</title>
     <link rel="stylesheet" href="./styles/style.css">
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link
-        href="https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,300;0,400;0,700;1,300&family=Roboto:wght@100;300&display=swap"
-        rel="stylesheet">
+    <link href="https://fonts.cdnfonts.com/css/sora-3" rel="stylesheet">
 </head>
 
 <body>
-    <div class="compensation-card">
-        <h1>Compensation <br />Calculator</h1>
-        <form>
-            <div class="table">
-                <label for="income">Average income</label><br>
-                <input type="number" id="income" name="income" placeholder="€" value=""><br>
-            </div>
-            <div class="table">
-                <label for="days">Days on sick-leave</label><br>
-                <input type="number" id="days" name="days" placeholder="days" value=""><br>
-            </div>
-            <div class="table">
-                <input type="checkbox" id="tb" name="tb" class="custom-checkbox">
-                <label for="tb">I have tubercolosis</label>
-            </div>
-            <button id="calculate-button">Calculate</button>
-        </form>
-        <hr />
-        <div class="lower-part">
-            <div class="employer-part">
-                <p>The employer compensates</p>
-                <div class="days"><span id="employer-days" class="day-count"></span></div>
-                <span id="employer-compensation" class="money-count"></span>
-                <div class="daily-allowence">
-                    <p>Daily allowance</p>
-                    <span id="daily-allowenceEmp"></span>
-                </div>
-            </div>
-            <div class="insurance-part">
-                <p>Health Insurance compensation </p>
-                <div class="days">
-                    <span id="insurance-days" class="day-count"></span>
-                </div>
-                <span id="insurance-compensation" class="money-count"></span>
-                <div class="daily-allowence">
-                    <p>Daily allowance</p>
-                    <span id="daily-allowenceIns"></span>
-                </div>
-            </div>
+    <div class="card">
+        <div class="condimentum-card">
+            <h1>Quam Tristique Condimentum</h1>
+            <p>
+                Duis mollis, est non commodo luctus, nisi erat porttitor ligula, eget lacinia odio sem nec elit. Cum
+                sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus.
+                <span>Curabitur blandit</span>
+                tempus porttitor. Integer posuere erat a ante venenatis dapibus posuere velit aliquet. Vestibulum id
+                ligula porta felis euismod semper.
+            </p>
+            <img src="./assets/paragraph-img.svg" alt="mark">
+            <h2>Fringilla Euismod Adipiscing Ipsum</h2>
+            <p class="condimentum-card-lower">
+                Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Maecenas
+                faucibus
+                mollis interdum. Aenean lacinia bibendum nulla sed.
+            </p>
+
+            <ul class="condimentum-card-lower_list">
+                <li>Tellus Ullamcorper Inceptos</li>
+                <li>Magna Condimentum
+                    <ul class="condimentum-card-lower_list-item">
+                        <li>Mattis Tristique</li>
+                        <li>Pharetra Pellentesque Dapibus</li>
+                    </ul>
+                </li>
+                <li>Aenean Inceptos</li>
+                <li>Parturient Bibendum</li>
+            </ul>
         </div>
-        <hr />
-        <div class="total-compensation">
-            <p>Compensation total for <span id="total-days"></span> days (gross)</p>
-            <div class='total'>
-                <span id="total-compensation"></span>
+        <div class="center">
+            <div class="compensation-card">
+                <h1>Compensation <br />Calculator</h1>
+                <form>
+                    <section class="table">
+                        <label for="income">Average income</label><br>
+                        <div class="placeholder-number" data-placeholder="€">
+                            <input type="number" id="income" name="income" value="1500"><br>
+                        </div>
+                    </section>
+                    <section class="table-days">
+                        <label for="days">Days on sick-leave</label><br>
+                        <div class="placeholder-days" data-placeholder="days">
+                            <input type="number" id="days" name="days" value="7"><br>
+                        </div>
+                    </section>
+                    <section class="table">
+                        <input type="checkbox" id="tb" name="tb" class="custom-checkbox">
+                        <label for="tb">I have tubercolosis</label>
+                    </section>
+                    <button id="calculate-button">Calculate</button>
+                </form>
+                <hr />
+                <div class="lower-part">
+                    <section class="employer-part">
+                        <p>The employer compensates</p>
+                        <div class="days"><span id="employer-days" class="day-count"></span></div>
+                        <span id="employer-compensation" class="money-count"></span>
+                        <div class="daily-allowence">
+                            <p>Daily allowance</p>
+                            <span id="daily-allowenceEmp"></span>
+                        </div>
+                    </section>
+                    <section class="insurance-part">
+                        <p>Health Insurance compensation </p>
+                        <div class="days">
+                            <span id="insurance-days" class="day-count"></span>
+                        </div>
+                        <span id="insurance-compensation" class="money-count"></span>
+                        <div class="daily-allowence">
+                            <p>Daily allowance</p>
+                            <span id="daily-allowenceIns"></span>
+                        </div>
+                    </section>
+                </div>
+                <hr />
+                <section class="total-compensation">
+                    <p>Compensation total for <span id="total-days"></span> days (gross)</p>
+                    <div class='total'>
+                        <span id="total-compensation"></span>
+                    </div>
+                </section>
             </div>
         </div>
     </div>
-
     <script src="main.js"></script>
 </body>
 
